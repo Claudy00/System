@@ -53,4 +53,65 @@ public class GerenciadorUsuarios {
         }
         return null; // Retorna null se não encontrar o usuário
     }
+
+    // Método para buscar usuários por Nome
+    public List<Usuario> buscarPorNome(String nome) {
+        List<Usuario> resultados = new ArrayList<>();
+        for (Usuario usuario : usuarios) {
+            if (usuario.getNome().toLowerCase().contains(nome.toLowerCase())) {
+                resultados.add(usuario);
+            }
+        }
+        return resultados;
+    }
+
+    // Metodo Atualizar Usuario
+     public boolean Atualizar (Usuario usuario){
+        for (Usuario pessoal : usuarios){
+            if (pessoal.getId()== usuario.getId()){
+                pessoal.setNome(usuario.getNome());
+                pessoal.setEmail(usuario.getEmail());
+                return  true;
+            }
+        }
+        return false;
+     }
+
+     // Metodo Deletar por ID
+    public  boolean Deletar (int id){
+        for (Usuario pessoal : usuarios){
+            if (pessoal.getId()== id){
+                usuarios.remove(pessoal);
+                return true ;
+            }
+        }
+        return  false ;
+    }
+
+    //Metodo para adicionar Amizade
+    public void adicionarAmizade(int idUsuario1, int idUsuario2){
+        Usuario usuario1 = null ;
+        Usuario usuario2 = null ;
+
+        for (Usuario pessoal : usuarios){
+            if (pessoal.getId() == idUsuario1){
+                usuario1 = pessoal ;
+            }
+
+            if (pessoal.getId() == idUsuario2){
+                usuario2 = pessoal;
+            }
+        }
+        if (usuario1!=null && usuario2!=null){
+            usuario1.adicionarAmigo(usuario1);
+            usuario2.adicionarAmigo(usuario2);
+            System.out.println("Amizade entre " + usuario1.getNome() + " e " + usuario2.getNome() + " foi criada com sucesso!");
+        } else {
+            System.out.println("Um ou ambos os usuários não foram encontrados.");
+        }
+
+    }
+
+
+
 }
