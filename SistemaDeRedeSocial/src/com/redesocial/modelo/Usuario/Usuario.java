@@ -13,10 +13,10 @@ public class Usuario {
     private String email;
     private String senha;
     private LocalDateTime dataCadastro;
-    private List<Usuario> amigos;
+    private static List<Usuario> amigos;
     private List<Post> posts;
 
-    public Usuario(String nome, String username, String email, String senha) {
+    public Usuario() {
         this.nome = nome;
         this.username = username;
         this.email = email;
@@ -92,9 +92,10 @@ public class Usuario {
     }
 
     // Métodos
-    public void adicionarAmigo(Usuario amigo) {
+    public static void adicionarAmigo(Usuario amigo) {
         amigos.add(amigo);
     }
+
 
     public void removerAmigo(Usuario amigo) {
         amigos.remove(amigo);

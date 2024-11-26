@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GerenciadorUsuarios {
-    private List<Usuario> usuarios = new ArrayList<>();
+    private static List<Usuario> usuarios = new ArrayList<>();
     private int proximoId = 1;
 
 // Metodo cadastrar Usuario
@@ -35,7 +35,7 @@ public class GerenciadorUsuarios {
     }
 
     // Método para buscar usuário por ID
-    public Usuario buscarPorId(int id) {
+    public static Usuario buscarPorId(int id) {
         for (Usuario usuario : usuarios) {
             if (usuario.getId() == id) {
                 return usuario;
@@ -45,7 +45,7 @@ public class GerenciadorUsuarios {
     }
 
     //Metodo para buscar por UserName
-    public Usuario buscarPorUsername(String username) {
+    public static Usuario buscarPorUsername(String username) {
         for (Usuario usuario : usuarios) {
             if (usuario.getUsername().equals(username)) {
                 return usuario;
@@ -112,6 +112,45 @@ public class GerenciadorUsuarios {
 
     }
 
+    // Metodo para remover Amizade
+    public void remover (int idUsuario1, int idUsuario2){
+        Usuario usuario1 = null ;
+        Usuario usuario2 = null ;
+
+        for (Usuario amigo : usuarios){
+            if (amigo.getId()== idUsuario1){
+                usuario1 = amigo;
+            }
+
+            if (amigo.getId()== idUsuario2){
+                usuario2 = amigo ;
+            }
+        }
+        if (usuario1!=null && usuario2!=null){
+            usuario1.removerAmigo(usuario1);
+            usuario2.removerAmigo(usuario2);
+            System.out.println("Amizade removida com sucesso.");
+        } else {
+            System.out.println("Os usuários não são amigos.");
+        }
+    }
+    // Método privado para validar um usuário
+    private void validarUsuario(Usuario usuario) {
+        if (usuario == null) {
+            throw new IllegalArgumentException("O usuário não pode ser nulo.");
+        }
+
+        // Verifica se o nome é válido
+        if (usuario.getNome() == null || usuario.getNome().isEmpty()) {
+            throw new IllegalArgumentException("Nome do usuário não pode ser vazio.");
+        }
+
+        // Verifica se o username é válido
+        if (usuario.getUsername() == null || usuario.getUsername().isEmpty()) {
+            throw new IllegalArgumentException("Username não pode ser vazio.");
+        }
+
+    }
 
 
-}
+    }
