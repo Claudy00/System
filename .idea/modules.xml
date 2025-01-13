@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/TDESI2024-1-N1/Heranca-Polimorfismo-Java/Heranca-Polimorfismo-Java.iml" filepath="$PROJECT_DIR$/TDESI2024-1-N1/Heranca-Polimorfismo-Java/Heranca-Polimorfismo-Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TDESI2024-1-N1/TDESI2024-1-N1/Heranca-Polimorfismo-Java/Heranca-Polimorfismo-Java1.iml" filepath="$PROJECT_DIR$/TDESI2024-1-N1/TDESI2024-1-N1/Heranca-Polimorfismo-Java/Heranca-Polimorfismo-Java1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/IdeaProjects.iml" filepath="$PROJECT_DIR$/.idea/IdeaProjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/POOExecicios/POOExecicios.iml" filepath="$PROJECT_DIR$/POOExecicios/POOExecicios.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TDESI2024-1-N1/TDESI2024-1-N1/POOExercicios01/POOExercicios01.iml" filepath="$PROJECT_DIR$/TDESI2024-1-N1/TDESI2024-1-N1/POOExercicios01/POOExercicios01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TDESI2024-1-N1/TDESI2024-1-N1/RevCondicionais/RevCondicionais.iml" filepath="$PROJECT_DIR$/TDESI2024-1-N1/TDESI2024-1-N1/RevCondicionais/RevCondicionais.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TDESI2024-1-N1/RevCondicionais/RevCondicionais1.iml" filepath="$PROJECT_DIR$/TDESI2024-1-N1/RevCondicionais/RevCondicionais1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TDESI2024-1-N1/TDESI2024-1-N1/RevRepeticao/RevRepeticao.iml" filepath="$PROJECT_DIR$/TDESI2024-1-N1/TDESI2024-1-N1/RevRepeticao/RevRepeticao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TDESI2024-1-N1/RevRepeticao/RevRepeticao1.iml" filepath="$PROJECT_DIR$/TDESI2024-1-N1/RevRepeticao/RevRepeticao1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SistemaDeRedeSocial/SistemaDeRedeSocial.iml" filepath="$PROJECT_DIR$/SistemaDeRedeSocial/SistemaDeRedeSocial.iml" />
+    </modules>
+  </component>
+</project>
