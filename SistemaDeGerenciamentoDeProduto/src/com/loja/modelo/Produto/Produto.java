@@ -59,16 +59,14 @@ public class Produto {
                 "Categoria         = " + categoria ;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Produto produto = (Produto) o;
-        return ID == produto.ID;
+    public boolean equals(Object o){
+        if(this == o ) return true;
+        if (o== null ||  getClass() != o.getClass()) return false;
+        Produto produto = (Produto) o ;
+        return  this.ID == produto.ID;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(ID);
+    public int hashCode(){
+     return Objects.hashCode(ID);
     }
 }
