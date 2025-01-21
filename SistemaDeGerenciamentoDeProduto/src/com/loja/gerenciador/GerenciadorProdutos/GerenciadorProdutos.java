@@ -28,4 +28,14 @@ public void criar(Produto produto){
     proximoID++;
 }
 
+//Metodo buscar Produto por ID
+public  Produto buscarPorId(int Id){
+    for (Produto prod : produtos){
+        if (prod.getID()==Id ){
+            return prod ;
+        }
+    }
+    return null ;
+}
+
 }
