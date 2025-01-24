@@ -29,13 +29,23 @@ public void criar(Produto produto){
 }
 
 //Metodo buscar Produto por ID
-public  Produto buscarPorId(int Id){
+public Produto buscarPorId(int Id){
     for (Produto prod : produtos){
-        if (prod.getID()==Id ){
+        if (prod.getID()==Id){
             return prod ;
         }
     }
     return null ;
 }
+
+//Metodo de Listar todos os produtos
+public List<Produto>listarTodos(){
+    List<Produto>prod = new ArrayList<>();
+   for (Produto produc : produtos){
+       prod.add(produc);
+   }
+   return prod ;
+  }
+
 
 }
