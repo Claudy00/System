@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08829700-4f0c-4787-91dc-14edbedd8a63" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Gerenciador/GerenciadorEPIs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modulos/EPIs/EPIs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modulos/Emprestimos/Emprestimo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modulos/Funcionarios/Funcionario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modulos/EPIs/EPIs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modulos/EPIs/EPIs.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +37,7 @@
     "Application.Menu.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "C:/Users/Master/Documents/Project/src/Main.java"
   }
