@@ -81,6 +81,9 @@ public class EPIs {
               case 4: removerEPIs();
                   System.out.println();
                   break;
+              default:
+                  System.out.println("Opcoe Invalida....");
+                  System.out.println();
           }
 
          }while (opcoe!=0);
@@ -109,10 +112,10 @@ public class EPIs {
             System.out.println();
             return;
         }
+
+        System.out.println("======= Lista De EPIs =======");
         for (int i=0; i<listarEPIs.size();i++){
-            System.out.println("======= Lista De EPIs =======");
             System.out.println("ID:"+(i+1) + listarEPIs.get(i));
-            System.out.println();
         }
     }
 
@@ -129,12 +132,15 @@ public class EPIs {
             System.out.println();
             return;
         }
-        ListarEPIs();
+
         for (int i=0; i<listarEPIs.size();i++){
             System.out.println("Digite o ID do EPI: ");
             ID = entrada.nextInt();
             entrada.nextLine();
             ID--;
+
+            EPIs EPI = listarEPIs.get(i);
+
             if (ID>=listarEPIs.size()){
                 System.out.println("ID Invalido....");
                 System.out.println();
@@ -146,12 +152,14 @@ public class EPIs {
             System.out.println("Digite a nova quantidade : ");
             int novaQuantidade = entrada.nextInt();
 
-            EPIs novoEPI = new EPIs(novoNome,novaQuantidade,novaQuantidade,new Date());
-            listarEPIs.add(novoEPI);
+            EPI.setNome(novoNome);
+            EPI.setQuantidade(novaQuantidade);
+            EPI.setData(new Date());
+
             System.out.println("===== EPI atualizado com sucesso ===== ");
             System.out.println("ID: "+(ID+1));
-            System.out.println("Novo nome      : "+novoNome);
-            System.out.println("Quantidade Est.: "+novaQuantidade);
+            System.out.println("Novo nome      : "+EPI.getNome());
+            System.out.println("Quantidade Est.: "+EPI.getQuantidade());
             System.out.println("Data da Atual..: "+new Date());
             System.out.println();
             break;
@@ -165,7 +173,7 @@ public class EPIs {
             System.out.println();
             return;
         }
-        for (int i=0; i<listarEPIs.size();i++){
+
             System.out.println("Digite o ID do EPI a remover: ");
             int ResetID = entrada.nextInt();
             ResetID--;
@@ -174,10 +182,9 @@ public class EPIs {
                 System.out.println();
                 return;
             }
-            EPIs remove = listarEPIs.remove(i);
-            System.out.println("EPI removido com sucesso...✅✅✅");
-            System.out.println();
-        }
+        EPIs removido = listarEPIs.remove(ResetID);
+        System.out.println("EPI removido com sucesso...✅✅✅");
+        System.out.println("Nome : "+ removido.getNome());
     }
 
 }
