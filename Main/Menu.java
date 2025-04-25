@@ -2,6 +2,7 @@ package Main;
 
 import java.util.Scanner;
 import Modulos.EPIs.EPIs;
+import Modulos.Funcionarios.Funcionario;
 
 public class Menu {
     public static void main(String[] args) {
@@ -19,6 +20,9 @@ public class Menu {
 
             switch (opcoe){
                 case 1: EPIs.MenuEPIs();
+                    System.out.println();
+                    break;
+                case 2: Funcionario.ModuloFuncionario();
                     System.out.println();
                     break;
             }
