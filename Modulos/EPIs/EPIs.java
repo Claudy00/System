@@ -63,7 +63,7 @@ public class EPIs {
           System.out.println("2.Listar EPIs");
           System.out.println("3.Atualizar EPIs");
           System.out.println("4.Remover EPIs");
-          System.out.println("0.Sair");
+          System.out.println("0.Voltar....");
           System.out.println("Escolha: ");
           opcoe = entrada.nextInt();
           entrada.nextLine();
@@ -98,7 +98,7 @@ public class EPIs {
         Date dataCadastrado = new Date();
         EPIs novoEPI = new EPIs(nome,quant,quant,dataCadastrado);
         listarEPIs.add(novoEPI);
-        System.out.println("~~~~~~ EPI cadastrado com sucesso~~~~~~");
+        System.out.println("======= EPI cadastrado com sucesso =======");
         System.out.println("Nome           : " +nome);
         System.out.println("Quantidade     : " +quant);
         System.out.println("Quantidade Est.: " +quant);
@@ -121,7 +121,8 @@ public class EPIs {
 
     @Override
     public String toString(){
-        return "        ✳Nome: " + nome + "       ✳Quantidade Estoque: " + quantidade + "         ✳Data: " + data;
+        return "        ✳Nome: " + nome + "       ✳Quantidade Estoque: " + quantidade
+                + "         ✳Data: " + data;
     }
 
     public static void atualizarEPIs(){

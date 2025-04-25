@@ -73,7 +73,10 @@ public class Funcionario {
             entrada.nextLine();
 
             switch (opcoe){
-                case 1: cadastrarFuncionario();
+                case 1:cadastrarFuncionario();
+                    System.out.println();
+                    break;
+                case 2:listarFuncionarios();
                     System.out.println();
                     break;
             }
@@ -88,6 +91,7 @@ public class Funcionario {
         String setor = entrada.nextLine();
         System.out.println("Digite a sua Funcão: ");
         String funcao = entrada.nextLine();
+        System.out.println();
 
         Funcionario fun = new Funcionario(nome,setor,funcao,new Date());
         funcionarios.add(fun);
@@ -98,5 +102,26 @@ public class Funcionario {
         System.out.println("Funcao : " + funcao);
         System.out.println("Data   : " + new Date());
         System.out.println();
+    }
+
+    public static void listarFuncionarios(){
+        Scanner entrada = new Scanner(System.in);
+        if (funcionarios.isEmpty()){
+            System.out.println("Nenhum funcionario cadastrado ....");
+            System.out.println();
+            return;
+        }
+
+        System.out.println("====== Lista de Funcionarios =======");
+        for (int i=0; i<funcionarios.size(); i++){
+            Funcionario fun1 = funcionarios.get(i);
+            System.out.println("ID  : " +(i+1)+ funcionarios.get(i));
+        }
+    }
+
+    public String toString(){
+        return "        ✳Nome: " + nome + "      ✳Setor: " + setor
+                + "      ✳Funcão: " + funcao + "      ✳Data: " + new Date();
+
     }
 }
