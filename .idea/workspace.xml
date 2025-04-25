@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08829700-4f0c-4787-91dc-14edbedd8a63" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modulos/EPIs/EPIs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modulos/EPIs/EPIs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gerenciador/GerenciadorEPIs.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gerenciador/GerenciadorEPIs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modulos/EPIs/EPIs.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modulos/EPIs/EPIs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modulos/Emprestimos/Emprestimo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modulos/Emprestimos/Emprestimo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modulos/Funcionarios/Funcionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modulos/Funcionarios/Funcionario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +26,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2w8pLQykD6WDC8YESojoTNPbQGJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -39,6 +42,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/claudyson_clairmeus/Documents/System/src",
     "onboarding.tips.debug.path": "C:/Users/Master/Documents/Project/src/Main.java"
   }
 }]]></component>
