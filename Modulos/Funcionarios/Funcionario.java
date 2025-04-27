@@ -62,7 +62,7 @@ public class Funcionario {
         Scanner entrada = new Scanner(System.in);
         int opcoe;
         do {
-            System.out.println("======= Modulo Funcionarios ========");
+            System.out.println("======= Menu Funcionarios ========");
             System.out.println("1.Cadastrar Funcionario");
             System.out.println("2.Listar Funcionario");
             System.out.println("3.Atualizar Funcionario");
@@ -85,6 +85,8 @@ public class Funcionario {
 
     public static void cadastrarFuncionario(){
         Scanner entrada = new Scanner(System.in);
+        System.out.println("Digite sua Senha: ");
+        String senha = entrada.nextLine();
         System.out.println("Digite seu nome: ");
         String nome = entrada.nextLine();
         System.out.println("Digite seu Setor: ");
@@ -98,6 +100,7 @@ public class Funcionario {
 
         System.out.println("======== Funcionario cadastrado com sucesso =======");
         System.out.println("Nome   : " + nome);
+        System.out.println("Senha  : " + senha);
         System.out.println("Setor  : " + setor);
         System.out.println("Funcao : " + funcao);
         System.out.println("Data   : " + new Date());

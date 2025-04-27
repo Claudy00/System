@@ -2,6 +2,7 @@ package Main;
 
 import java.util.Scanner;
 import Modulos.EPIs.EPIs;
+import Modulos.Emprestimos.Emprestimo;
 import Modulos.Funcionarios.Funcionario;
 
 public class Menu {
@@ -23,6 +24,9 @@ public class Menu {
                     System.out.println();
                     break;
                 case 2: Funcionario.ModuloFuncionario();
+                    System.out.println();
+                    break;
+                case 3: Emprestimo.ModuloEmprestimo();
                     System.out.println();
                     break;
             }
