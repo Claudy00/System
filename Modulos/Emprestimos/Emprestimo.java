@@ -80,6 +80,9 @@ public class Emprestimo {
                 case 1:cadastrarEmprestimos();
                     System.out.println();
                     break;
+                case 2:listarEmprestimos();
+                    System.out.println();
+                    break;
             }
         }while (opcoe!=0);
     }
@@ -153,6 +156,19 @@ public class Emprestimo {
             System.out.println("Quantidadde Selecionado Insuficiente..");
             System.out.println("Quantidade Estoque : " + EpiSelecionado.getQuantidadeEstoque());
             System.out.println();
+        }
+    }
+
+    public static void listarEmprestimos(){
+        ArrayList<Funcionario> fun1 = Funcionario.getFuncionarios();
+        ArrayList<EPIs> EP1 = EPIs.getListarEPIs();
+
+        System.out.println("====== Lista De Emprestimos =====");
+        for (int i=0; i< emprestimos.size(); i++){
+            System.out.println("ID: " +(i+1) + "      ✳Funcionario: " + Funcionario.getFuncionarios().get(i)
+                    +"      ✳EPI: " + EP1.get(i).getNome()
+                    +"      ✳Quantida: " + EP1.get(i).getQuantidade()
+                    +"      ✳Data: " + EP1.get(i).getData());
         }
     }
 }
