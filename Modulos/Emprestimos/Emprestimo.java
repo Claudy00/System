@@ -85,56 +85,74 @@ public class Emprestimo {
     }
 
     public static void cadastrarEmprestimos(){
-        Scanner entrada = new Scanner(System.in);
         ArrayList<Funcionario> funcionarios = Funcionario.getFuncionarios();
-        ArrayList<EPIs> EPI = EPIs.getListarEPIs();
-
+        ArrayList<EPIs> EP1 = EPIs.getListarEPIs();
+        Scanner entrada = new Scanner(System.in);
         if (funcionarios.isEmpty()){
-            System.out.println("Nenhum Funcionarios cadastrados....");
+            System.out.println("Nenhum funcionario cadastrado...");
+            return;
+        }
+
+        if (EP1.isEmpty()){
+            System.out.println("Nenhum EPI cadastrado...");
+            return;
+        }
+
+        System.out.println("Digite o ID do Funcionario: ");
+        int IndexFun = entrada.nextInt();
+        IndexFun--;
+        entrada.nextLine();
+        System.out.println();
+
+        if (IndexFun>=funcionarios.size() || IndexFun<0){
+            System.out.println("ID invalido....");
             System.out.println();
             return;
         }
 
-        if (EPI.isEmpty()){
-            System.out.println("Nenhum EPIs cadastrado....");
+        System.out.println("===== Lista De EPIs =====");
+       for (int i=0; i< EP1.size(); i++){
+           System.out.println("ID: "+(i+1) + "      ✳Nome: "
+                   + EP1.get(i).getNome() + "       ✳Quantidade Estoque: "
+                   + EP1.get(i).getQuantidadeEstoque());
+
+       }
+
+        System.out.println("Digite o ID do EPI: ");
+        int indexEPI = entrada.nextInt();
+        indexEPI--;
+
+        if (indexEPI>=EP1.size() || indexEPI<0){
+            System.out.println("ID EPI invalido.... ");
             System.out.println();
             return;
         }
 
-        System.out.println("Escolha o ID EPI desejado: ");
-        int indexEpi = entrada.nextInt();
-        entrada.nextLine();
-        indexEpi--;
-
-        if (indexEpi >= EPI.size()){
-                System.out.println("ID Invalido");
-                return;
-        }
-
-        System.out.println("Escolha o ID do Funcionario: ");
-        int indexFun = entrada.nextInt();
-        entrada.nextLine();
-        indexFun--;
-
-        if (indexFun>=funcionarios.size()){
-            System.out.println("ID funcionario Invalido");
-            return;
-        }
-
-        System.out.println("Digite a quantidade: ");
+        System.out.println("Digite a quantidade : ");
         int quant = entrada.nextInt();
-        Date data = new Date();
 
-        EPIs IndexEPISelecionado = EPI.get(indexEpi);
+        EPIs EpiSelecionado = EP1.get(indexEPI);
 
-        if (quant<= IndexEPISelecionado.getQuantidade()){
-            IndexEPISelecionado.setQuantidadeEstoque(IndexEPISelecionado.getQuantidadeEstoque() - quant);
-            Emprestimo novo = new Emprestimo(funcionarios.get(indexFun),EPI.get(indexEpi),quant,data);
+        if (EpiSelecionado.getQuantidadeEstoque()>=quant){
+            EpiSelecionado.setQuantidadeEstoque(EpiSelecionado.getQuantidadeEstoque() - quant);
+            Emprestimo novo = new Emprestimo(Funcionario.getFuncionarios().get(IndexFun),EPIs.getListarEPIs().get(indexEPI),quant, new Date());
             emprestimos.add(novo);
-            System.out.println("Quantidade Estoque : "+IndexEPISelecionado.getQuantidadeEstoque());
-        }else{
-            System.out.println("Quantidade Insuficiente no estoque...");
-        }
 
+            System.out.println();
+            System.out.println("====== Emprestimom realizado com sucesso ====");
+            for (int i=0 ; i< emprestimos.size(); i++){
+                Emprestimo dados = Emprestimo.emprestimos.get(i);
+                System.out.println("Nome do Fun: "+ dados.getFun1().getNome());
+                System.out.println("Nome do EPI: "+dados.getEPI().getNome());
+                System.out.println("Quantidade : "+dados.getEPI().getQuantidade());
+                System.out.println("Quant. estoque: "+EpiSelecionado.getQuantidadeEstoque());
+                System.out.println("Data       : "+dados.date);
+                System.out.println();
+            }
+        }else {
+            System.out.println("Quantidadde Selecionado Insuficiente..");
+            System.out.println("Quantidade Estoque : " + EpiSelecionado.getQuantidadeEstoque());
+            System.out.println();
+        }
     }
 }
