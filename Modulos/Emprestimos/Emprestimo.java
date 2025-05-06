@@ -151,6 +151,7 @@ public class Emprestimo {
                 System.out.println("Quant. estoque: "+EpiSelecionado.getQuantidadeEstoque());
                 System.out.println("Data       : "+dados.date);
                 System.out.println();
+                break;
             }
         }else {
             System.out.println("Quantidadde Selecionado Insuficiente..");
@@ -165,10 +166,12 @@ public class Emprestimo {
 
         System.out.println("====== Lista De Emprestimos =====");
         for (int i=0; i< emprestimos.size(); i++){
-            System.out.println("ID: " +(i+1) + "      ✳Funcionario: " + Funcionario.getFuncionarios().get(i)
-                    +"      ✳EPI: " + EP1.get(i).getNome()
-                    +"      ✳Quantida: " + EP1.get(i).getQuantidade()
-                    +"      ✳Data: " + EP1.get(i).getData());
+            Emprestimo e = Emprestimo.emprestimos.get(i);
+            System.out.println("ID: " +(i+1) + "      ✳Funcionario: " + e.fun1.getNome()
+                    +"      ✳EPI: " + e.getEPI().getNome()
+                    +"      ✳Quantida: " + e.getQuantidade()
+                    +"      ✳Data: " + e.date);
+            System.out.println();
         }
     }
 }
